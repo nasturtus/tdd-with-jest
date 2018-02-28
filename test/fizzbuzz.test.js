@@ -8,6 +8,14 @@ test("3 should return fizz", function() {
   expect(fizzbuzz(3)).toEqual("fizz");
 });
 
-test.skip("5 should return buzz", function() {
+test("5 should return buzz", function() {
   expect(fizzbuzz(5)).toEqual("buzz");
+});
+
+test("15 should return fizzbuzz", function() {
+  expect(fizzbuzz(15)).toEqual("fizzbuzz");
+});
+
+test("45 should return fizzbuzz", function() {
+  expect(fizzbuzz(15)).toEqual("fizzbuzz");
 });

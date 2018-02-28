@@ -8,13 +8,15 @@ For a given natural number greater than zero return:
 */
 
 function fizzbuzz(number) {
-  var result;
-  if (number === 1) {
-    result = number;
-  } else if (number % 3 === 0) {
-    result = "fizz";
+  var str = "";
+  if (number % 3 === 0) {
+    str = "fizz";
   }
-  return result;
+  if (number % 5 === 0) {
+    str += "buzz";
+  }
+
+  return str.length > 0 ? str : number;
 }
 
 module.exports = fizzbuzz;
