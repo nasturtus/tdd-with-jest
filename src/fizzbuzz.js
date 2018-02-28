@@ -11,6 +11,8 @@ function fizzbuzz(number) {
   var result;
   if (number === 1) {
     result = number;
+  } else if (number % 3 === 0) {
+    result = "fizz";
   }
   return result;
 }
