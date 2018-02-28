@@ -7,8 +7,23 @@ kebabize('camelsHaveThreeHumps') // camels-have-three-humps
 kebabize('camelsHave3Humps') // camels-have-humps
 */
 
+function cleanInput(input) {
+  var str = "";
+  for (var i = 0; i < input.length; i++) {
+    if (
+      (input[i].charCodeAt(0) >= 65 && input[i].charCodeAt(0) <= 90) ||
+      (input[i].charCodeAt(0) >= 97 && input[i].charCodeAt(0) <= 122)
+    ) {
+      str += input[i];
+    }
+  }
+  return str;
+}
+
 function kebabize(input) {
   var upperCaseChrPos = [];
+
+  var input = cleanInput(input);
 
   for (var i = 0; i < input.length; i++) {
     //find positions for upper case
